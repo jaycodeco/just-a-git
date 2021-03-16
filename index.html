@@ -9,14 +9,38 @@
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <input type="button" onclick="toggle()" id="btn" value="light">
     <main>
     <div class="card" >
         <h2>HELLO, WORLD</h2>
         <div class="box">
-            <p>Hey it's <strong>J.C</strong> and I just felt like to git</p>
+            <p id="text">Hey it's <strong>J.C</strong> and I just felt like to git</p>
             <img src="./assets/img/pp.jpg" alt=""/>
         </div>
     </div>
         </main>
+    
+    <script>
+        var state =0;
+
+        function toggle(){
+            if(state == 0){
+                document.body.style.backgroundColor = "#FFF";
+                document.getElementById("text").style.color="#000";
+                document.getElementById("btn").style.color="#FFF";
+                document.getElementById("btn").style.backgroundColor="#000";
+                document.getElementById("btn").value = "Dark";
+                state = 1;
+            }
+            else{
+                document.body.style.backgroundColor = "#222";
+                document.getElementById("text").style.color="#FFF";
+                document.getElementById("btn").style.color="#000";
+                document.getElementById("btn").style.backgroundColor="#FFF";
+                document.getElementById("btn").value = "Light";
+                state = 0;
+            }
+        }
+    </script>
 </body>
 </html>

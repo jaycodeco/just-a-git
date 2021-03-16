@@ -1,0 +1,85 @@
+body{
+    margin:0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #222;
+}
+
+input#btn{
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 16px;
+    width:9ch;
+    height: 3ch;
+    border-radius: 5px;
+    z-index: 10;
+    margin-top: 30px;
+    background-color: #FFF;
+    border: none;
+    color: #000;
+    font-weight: 700;
+}
+
+main{
+    grid-column: 2 /8;
+    grid-row: 2 /2;    
+}
+
+div.card{
+    box-shadow: 0 0 10px black;
+    padding: 5px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-basis: 50%;
+    min-width: 250px;
+}
+
+.box{
+    margin: 10px;
+}
+
+.card .box img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    border: 3px solid blue;
+    margin: 5px;
+    background-color: none;
+}
+
+.card .box p{
+    margin: 5px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.card h2{
+    margin: 5px;
+    font-size: 48px;
+}
+
+
+@media screen and (min-width: 850px){
+    main{
+    grid-column: 4 /7;
+    grid-row: 2 /2;
+        
+    }
+}
+
+@media screen and (max-width: 500px){
+    main{
+    grid-column: 2 /6;
+    grid-row: 2 /2;
+        
+    }
+
+
+    div.card{
+        flex-direction: column;
+    }
+}
